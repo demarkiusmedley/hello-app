@@ -1,19 +1,25 @@
 class StaticPagesController < ApplicationController
   def hello
-   render html: "Hello, world!"
+   render "hello"
  end
 
 
   def home
-    render html: "This is the home page"
+    render "home"
 
   end
 
   def goodbye
-    render html: "Goodbye"
+    render "goodbye"
   end
+
 def name
-  render html: "name"
+  render "name"
+  end
+
+def roll_die
+  @number = [1, 2, 3, 4, 5, 6].sample
+  render "roll_die"  
 end
   end
 
